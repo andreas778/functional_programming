@@ -54,25 +54,14 @@
 </p>
 
 ```lisp
-;; Створення допоміжної змінної для підсписку
-(setq sublist '(4 E 5))
 
 ;; Створення основного списку
-(setq main-list 
-  (list 'D 
-        (cons (car sublist) 
-              (cons (cadr sublist) 
-                    (list (caddr sublist))))
-        'F))
+(setq main-list
+      (let ((sublist 'F)) 
+        (list 'D (list 4 'E sublist) (list 5) sublist))) 
 
 ;; Перевірка структури
 (print main-list)
-; (D (4 E 5) F)
+; (D (4 E F) (5) F)
 
-(print (second main-list))
-; (4 E 5)
-
-(print (cadadr main-list))
-; E
 ```
-
