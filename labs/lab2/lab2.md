@@ -84,7 +84,7 @@
 	  (test-merge-lists-spinning-pairs)
 	  (format t "~%Testing list-set-intersect-p:~%")
 	  (test-list-set-intersect-p))
-.
+	
 
 ## Результат виконання тестових наборів
 
