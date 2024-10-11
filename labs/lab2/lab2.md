@@ -88,15 +88,16 @@
 
 ## Результат виконання тестових наборів
    ```lisp
-	Testing merge-lists-spinning-pairs:
-	passed... test 1
-	passed... test 2
-	passed... test 3
+   Testing merge-lists-spinning-pairs:
+   passed... test 1
+   passed... test 2
+   passed... test 3
 
-	Testing list-set-intersect-p:
-	passed... test 1
-	passed... test 2
-	passed... test 3
-	NIL
+   Testing list-set-intersect-p:
+   passed... test 1
+   passed... test 2
+   passed... test 3
+   NIL
+
 
 
