@@ -87,6 +87,7 @@
 
 
 ## Результат виконання тестових наборів
+
    ```lisp
    Testing merge-lists-spinning-pairs:
    passed... test 1
