@@ -85,8 +85,8 @@
 	  (format t "~%Testing list-set-intersect-p:~%")
 	  (test-list-set-intersect-p))
 
-## Результат виконання тестових наборів
 
+## Результат виконання тестових наборів
    ```lisp
 	Testing merge-lists-spinning-pairs:
 	passed... test 1
