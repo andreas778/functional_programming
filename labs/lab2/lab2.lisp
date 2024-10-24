@@ -10,9 +10,9 @@
 
 (defun list-set-intersect-p (set1 set2)
   (cond ((or (null set1) (null set2)) nil)
-        ((equal (car set1) (car set2)) t)
-        ((null (cdr set2)) (list-set-intersect-p (cdr set1) set2))
-        (t (or (list-set-intersect-p (list (car set1)) (cdr set2))
+        ((null set2) (list-set-intersect-p (cdr set1) (cdr set2)))
+        ((eql (car set1) (car set2)) t)
+        (t (or (list-set-intersect-p set1 (cdr set2))
                (list-set-intersect-p (cdr set1) set2)))))
 
 
@@ -51,3 +51,5 @@
   (test-merge-lists-spinning-pairs)
   (format t "~%Testing list-set-intersect-p:~%")
   (test-list-set-intersect-p))
+
+(run-all-tests)
