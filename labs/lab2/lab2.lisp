@@ -10,7 +10,6 @@
 
 (defun list-set-intersect-p (set1 set2)
   (cond ((or (null set1) (null set2)) nil)
-        ((null set2) (list-set-intersect-p (cdr set1) (cdr set2)))
         ((eql (car set1) (car set2)) t)
         (t (or (list-set-intersect-p set1 (cdr set2))
                (list-set-intersect-p (cdr set1) set2)))))
