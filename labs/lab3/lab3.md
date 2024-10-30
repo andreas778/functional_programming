@@ -80,6 +80,7 @@
         (dolist (test test-cases)
         (format t "Input: ~A~%" test)
         (format t "Result: ~A~%~%" (bubble-sort-imperative test)))))
+```
 
 ## Результат виконання тестових наборів
 
