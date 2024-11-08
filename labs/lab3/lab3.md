@@ -20,7 +20,6 @@
 
 1. Лістинг функціонального варіанту:
    ```lisp
-; Функціональний варіант
 (defun bubble-sort-functional (lst &optional (flag nil))
   (if (null (cdr lst))
       lst
