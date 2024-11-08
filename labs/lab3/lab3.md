@@ -20,18 +20,18 @@
 
 1. Лістинг функціонального варіанту:
    ```lisp
-(defun bubble-sort-functional (lst &optional (flag nil))
-  (if (null (cdr lst))
-      lst
-      (let ((current-list 
-             (if (> (car lst) (cadr lst))
-                 (progn
-                   (setf flag t)
-                   (cons (cadr lst) (bubble-sort-functional (cons (car lst) (cddr lst)) t)))
-                 (cons (car lst) (bubble-sort-functional (cdr lst) flag)))))
-        (if flag
-            (bubble-sort-functional current-list)
-            current-list))))
+	(defun bubble-sort-functional (lst &optional (flag nil))
+	  (if (null (cdr lst))
+	      lst
+	      (let ((current-list 
+	             (if (> (car lst) (cadr lst))
+	                 (progn
+	                   (setf flag t)
+	                   (cons (cadr lst) (bubble-sort-functional (cons (car lst) (cddr lst)) t)))
+	                 (cons (car lst) (bubble-sort-functional (cdr lst) flag)))))
+	        (if flag
+	            (bubble-sort-functional current-list)
+	            current-list))))
 					 
 2. Лістинг імперативного варіанту:
    ```lisp
