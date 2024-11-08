@@ -1,17 +1,17 @@
 ; Функціональний варіант
-(defun bubble-sort-functional (lst)
-  (if (<= (length lst) 1)
-      lst
-      (let ((current-list 
-             (if (> (car lst) (cadr lst))
-                 (cons (cadr lst)
-                       (cons (car lst)
-                             (bubble-sort-functional (cddr lst))))
-                 (cons (car lst)
-                       (bubble-sort-functional (cdr lst))))))
-        (if (equal current-list lst)
-            lst
-            (bubble-sort-functional current-list)))))
+ (defun bubble-sort-functional (lst &optional (flag nil))
+   (if (null (cdr lst))
+       lst
+       (let ((current-list 
+              (if (> (car lst) (cadr lst))
+                  (progn
+                    (setf flag t)
+                    (cons (cadr lst) (bubble-sort-functional (cons (car lst) (cddr lst)) t)))
+                  (cons (car lst) (bubble-sort-functional (cdr lst) flag)))))
+         (if flag
+             (bubble-sort-functional current-list)
+             current-list))))
+
 
 ; Імперативний варіант
 (defun bubble-sort-imperative (lst)
